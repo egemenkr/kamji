@@ -6,14 +6,68 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BD47248E3078748D00C4515A /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD47248D3078748D00C4515A /* WidgetKit.framework */; };
+		BD4724903078748D00C4515A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD47248F3078748D00C4515A /* SwiftUI.framework */; };
+		BD4724A13078748E00C4515A /* kamjiWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BD47248B3078748D00C4515A /* kamjiWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BD4724AC3078752D00C4515A /* TimerAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4724AB3078752D00C4515A /* TimerAttributes.swift */; };
+		BD4724AD3078752D00C4515A /* TimerAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4724AB3078752D00C4515A /* TimerAttributes.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BD47249F3078748E00C4515A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD4724713078727500C4515A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD47248A3078748D00C4515A;
+			remoteInfo = kamjiWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BD4724A63078748E00C4515A /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BD4724A13078748E00C4515A /* kamjiWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		BD4724793078727500C4515A /* kamji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kamji.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD47248B3078748D00C4515A /* kamjiWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = kamjiWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD47248D3078748D00C4515A /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		BD47248F3078748D00C4515A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		BD4724AB3078752D00C4515A /* TimerAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerAttributes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		BD4724A23078748E00C4515A /* Exceptions for "kamjiWidget" folder in "kamjiWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = BD47248A3078748D00C4515A /* kamjiWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		BD47247B3078727500C4515A /* kamji */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = kamji;
+			sourceTree = "<group>";
+		};
+		BD4724913078748D00C4515A /* kamjiWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				BD4724A23078748E00C4515A /* Exceptions for "kamjiWidget" folder in "kamjiWidgetExtension" target */,
+			);
+			path = kamjiWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,13 +80,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BD4724883078748D00C4515A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD4724903078748D00C4515A /* SwiftUI.framework in Frameworks */,
+				BD47248E3078748D00C4515A /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		BD4724703078727500C4515A = {
 			isa = PBXGroup;
 			children = (
+				BD4724AB3078752D00C4515A /* TimerAttributes.swift */,
 				BD47247B3078727500C4515A /* kamji */,
+				BD4724913078748D00C4515A /* kamjiWidget */,
+				BD47248C3078748D00C4515A /* Frameworks */,
 				BD47247A3078727500C4515A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +107,18 @@
 			isa = PBXGroup;
 			children = (
 				BD4724793078727500C4515A /* kamji.app */,
+				BD47248B3078748D00C4515A /* kamjiWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		BD47248C3078748D00C4515A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD47248D3078748D00C4515A /* WidgetKit.framework */,
+				BD47248F3078748D00C4515A /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +131,12 @@
 				BD4724753078727500C4515A /* Sources */,
 				BD4724763078727500C4515A /* Frameworks */,
 				BD4724773078727500C4515A /* Resources */,
+				BD4724A63078748E00C4515A /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BD4724A03078748E00C4515A /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				BD47247B3078727500C4515A /* kamji */,
@@ -69,6 +147,28 @@
 			productName = kamji;
 			productReference = BD4724793078727500C4515A /* kamji.app */;
 			productType = "com.apple.product-type.application";
+		};
+		BD47248A3078748D00C4515A /* kamjiWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD4724A33078748E00C4515A /* Build configuration list for PBXNativeTarget "kamjiWidgetExtension" */;
+			buildPhases = (
+				BD4724873078748D00C4515A /* Sources */,
+				BD4724883078748D00C4515A /* Frameworks */,
+				BD4724893078748D00C4515A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				BD4724913078748D00C4515A /* kamjiWidget */,
+			);
+			name = kamjiWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = kamjiWidgetExtension;
+			productReference = BD47248B3078748D00C4515A /* kamjiWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +181,9 @@
 				LastUpgradeCheck = 2660;
 				TargetAttributes = {
 					BD4724783078727500C4515A = {
+						CreatedOnToolsVersion = 26.6;
+					};
+					BD47248A3078748D00C4515A = {
 						CreatedOnToolsVersion = 26.6;
 					};
 				};
@@ -100,12 +203,20 @@
 			projectRoot = "";
 			targets = (
 				BD4724783078727500C4515A /* kamji */,
+				BD47248A3078748D00C4515A /* kamjiWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BD4724773078727500C4515A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD4724893078748D00C4515A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -119,10 +230,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD4724AC3078752D00C4515A /* TimerAttributes.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD4724873078748D00C4515A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD4724AD3078752D00C4515A /* TimerAttributes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD4724A03078748E00C4515A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD47248A3078748D00C4515A /* kamjiWidgetExtension */;
+			targetProxy = BD47249F3078748E00C4515A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		BD4724823078727600C4515A /* Debug */ = {
@@ -249,10 +377,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99PFB8ACN7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -280,10 +411,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99PFB8ACN7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +433,66 @@
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BD4724A43078748E00C4515A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99PFB8ACN7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = kamjiWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = kamjiWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.egemen.kamji.kamjiWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BD4724A53078748E00C4515A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99PFB8ACN7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = kamjiWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = kamjiWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.egemen.kamji.kamjiWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -323,6 +517,15 @@
 			buildConfigurations = (
 				BD4724853078727600C4515A /* Debug */,
 				BD4724863078727600C4515A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD4724A33078748E00C4515A /* Build configuration list for PBXNativeTarget "kamjiWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD4724A43078748E00C4515A /* Debug */,
+				BD4724A53078748E00C4515A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
